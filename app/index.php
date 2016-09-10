@@ -2,7 +2,7 @@
     require("../vendor/autoload.php");
 
     // Configure dot env
-    $dotenv = new Dotenv\Dotenv("../".__DIR__);
+    $dotenv = new Dotenv\Dotenv("../");
 	$dotenv->overload();
     
     $app = new Silex\Application();
