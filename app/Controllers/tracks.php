@@ -1,12 +1,20 @@
 <?php
-    // use Models\Track;
+    use App\Models\Track;
 
     $tracks = $app['controllers_factory'];
+
+    $tracks->get('/{id}', function($id) use ($app){
+	    $track = Track::find($id);
+	    $track = new \League\Fractal\Resource\Item($track, new TrackTransformer);
+	    $output = $app['serializer']->createData($track)->toArray();
+	    return json_encode($output);
+	});
     
     $tracks->get('/', function() use ($app){
-        $tracklist = \App\Models\Track::getTrackList();
-        $output = array("data" => $tracklist);
-        return json_encode($output);
+        $track = Track::find($id);
+	    $track = new \League\Fractal\Resource\Item($track, new TrackTransformer);
+	    $output = $app['serializer']->createData($track)->toArray();
+	    return json_encode($output);
     });
-    
+
     return $tracks;
