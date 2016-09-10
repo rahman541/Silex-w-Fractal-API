@@ -1,6 +1,7 @@
 {
         "require": {
             "silex/silex": "~1.2",
-            "illuminate/database": "*"
+            "illuminate/database": "*",
+                "vlucas/phpdotenv": "^2.4"
         }
     }
