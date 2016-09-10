@@ -27,9 +27,13 @@ class TrackMigration extends AbstractMigration
      */
     public function change()
     {
-    	$table = $this->table('track');
+    	$table = $this->table('tracks');
         $table->addColumn('title', 'string')
               ->addColumn('artist_name', 'string')
+              ->addColumn('artist_website', 'string')
+              ->addColumn('album_name', 'string')
+              ->addColumn('album_release', 'string')
+              ->addColumn('album_label', 'string')
               ->create();
     }
 }
