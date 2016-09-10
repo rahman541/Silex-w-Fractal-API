@@ -1,4 +1,5 @@
 <?php
+namespace App\Models;
 
 class Track extends \Illuminate\Database\Eloquent\Model{
 	protected $table = 'tracks';
