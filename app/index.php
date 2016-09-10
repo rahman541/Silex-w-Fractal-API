@@ -6,6 +6,7 @@
 	$dotenv->overload();
     
     $app = new Silex\Application();
+    $app['debug'] = true;
     
     $app['database'] = require("database.php");
     
