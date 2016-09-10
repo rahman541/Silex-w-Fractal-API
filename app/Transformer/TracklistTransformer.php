@@ -1,6 +1,6 @@
 <?php
     namespace App\Transformer;
-    use Models\Track;
+    use App\Models\Track;
     
     class TracklistTransformer extends \League\Fractal\TransformerAbstract{
         public function transform(Track $track)
