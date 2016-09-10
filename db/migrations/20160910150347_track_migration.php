@@ -28,9 +28,8 @@ class TrackMigration extends AbstractMigration
     public function change()
     {
     	$table = $this->table('track');
-        $table->addColumn('product', 'integer')
-              ->addColumn('login', 'integer')
-              ->addColumn('quantity', 'integer')
+        $table->addColumn('title', 'string')
+              ->addColumn('artist_name', 'string')
               ->create();
     }
 }
