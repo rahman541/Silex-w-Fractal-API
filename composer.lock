@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2c492eda0b661a6b5faf99394ca8cab9",
-    "content-hash": "52d49966225505a054b4d5751567b60a",
+    "hash": "9908c62185f0348c3c2a46ed173d1d3e",
+    "content-hash": "7b60fa66ffdb19037cd72e045396312b",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -1373,10 +1373,76 @@
             "time": "2016-09-01 10:05:43"
         }
     ],
-    "packages-dev": [],
+    "packages-dev": [
+        {
+            "name": "symfony/var-dumper",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/var-dumper.git",
+                "reference": "c58d0be9e26bcb72c3ac34060e755b3cfb32dc85"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/c58d0be9e26bcb72c3ac34060e755b3cfb32dc85",
+                "reference": "c58d0be9e26bcb72c3ac34060e755b3cfb32dc85",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9",
+                "symfony/polyfill-mbstring": "~1.0"
+            },
+            "require-dev": {
+                "twig/twig": "~1.20|~2.0"
+            },
+            "suggest": {
+                "ext-symfony_debug": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.2-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "Resources/functions/dump.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Component\\VarDumper\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony mechanism for exploring and dumping PHP variables",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "debug",
+                "dump"
+            ],
+            "time": "2016-09-06 11:07:23"
+        }
+    ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "symfony/var-dumper": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
