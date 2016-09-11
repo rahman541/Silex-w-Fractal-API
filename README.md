@@ -5,7 +5,7 @@
 
 A simple JSON API implemented with Silex, Fractal & Eloquent
 ## Introduction
-using:
+Framework using:
 
 - [Silex micro-Framework](http://silex.sensiolabs.org/)
 - [Eloquent ORM](https://github.com/illuminate/database)
