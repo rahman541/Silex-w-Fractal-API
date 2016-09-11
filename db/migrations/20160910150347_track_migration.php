@@ -1,8 +1,6 @@
 <?php
-
 use Phinx\Migration\AbstractMigration;
-
-class BorrowMigration extends AbstractMigration
+class TrackMigration extends AbstractMigration
 {
     /**
      * Change Method.
@@ -27,10 +25,13 @@ class BorrowMigration extends AbstractMigration
      */
     public function change()
     {
-    	$table = $this->table('borrow');
-        $table->addColumn('book_id', 'string', array('limit' => '40'))
-              ->addColumn('user_id', 'string')
-              ->addColumn('return_date', 'string', ['limit'=>'20'])
+    	$table = $this->table('tracks');
+        $table->addColumn('title', 'string')
+              ->addColumn('artist_name', 'string')
+              ->addColumn('artist_website', 'string')
+              ->addColumn('album_name', 'string')
+              ->addColumn('album_release', 'string')
+              ->addColumn('album_label', 'string')
               ->create();
     }
 }

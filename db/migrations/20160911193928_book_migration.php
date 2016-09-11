@@ -27,6 +27,11 @@ class BookMigration extends AbstractMigration
      */
     public function change()
     {
-
+    	$table = $this->table('book');
+        $table->addColumn('author', 'string', array('limit' => '40'))
+              ->addColumn('title', 'string')
+              ->addColumn('price', 'string', ['limit'=>'20'])
+              ->addColumn('available', 'string')
+              ->create();
     }
 }

@@ -27,6 +27,13 @@ class UserMigration extends AbstractMigration
      */
     public function change()
     {
-
+    	$table = $this->table('user');
+        $table->addColumn('type', 'string', array('limit' => '40'))
+              ->addColumn('email', 'string')
+              ->addColumn('phone_no', 'string', ['limit'=>'20'])
+              ->addColumn('password', 'string')
+              ->addColumn('name', 'string')
+              ->addColumn('address', 'string')
+              ->create();
     }
 }
