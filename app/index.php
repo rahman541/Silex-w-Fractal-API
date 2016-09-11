@@ -10,14 +10,18 @@
     
     $app['database'] = require("database.php");
 
+    $app->register(new Silex\Provider\TwigServiceProvider(), array(
+	    'twig.path' => __DIR__.'/../views',
+	));
+
     $app['serializer'] = $app->share(function(){
 	    $manager = new \League\Fractal\Manager();
 	    $manager->setSerializer(new League\Fractal\Serializer\DataArraySerializer());
 	    return $manager;
 	});
 
-	$app->get('/', function() use($app) { 
-	    return 'Welcome to silex framework';
+	$app->get('/', function() use($app) {
+		return $app['twig']->render('home.twig');
 	}); 
     
     $app->mount('/tracks', include 'controllers/tracks.php');
