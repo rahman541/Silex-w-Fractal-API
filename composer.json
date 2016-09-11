@@ -4,7 +4,8 @@
 		"illuminate/database": "*",
 		"vlucas/phpdotenv": "^2.4",
 		"robmorgan/phinx": "^0.6.4",
-		"league/fractal": "^0.14.0"
+		"league/fractal": "^0.14.0",
+		"twig/twig": "~1.0"
 	},
 	"require-dev": {
         "symfony/var-dumper": "dev-master"
