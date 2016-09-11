@@ -1,6 +1,5 @@
 # Silex + Fractal + Eloquent ORM + Phinx
 
-[![Build Status](https://travis-ci.org/rahman5147/Silex-w-Fractal-API.svg?branch=master)](https://travis-ci.org/laravel/framework)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/hyperium/hyper/master/LICENSE)
 
 A simple JSON API implemented with Silex, Fractal & Eloquent
