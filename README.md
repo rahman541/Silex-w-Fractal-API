@@ -54,3 +54,6 @@ vendor/bin/phinx migrate
 vendor/bin/phinx seed:run
 ```
 *Note: To rollback/undo this setup issue the following command `vendor/bin/phinx rollback -t 0`*
+
+## Todo
+Documentation
