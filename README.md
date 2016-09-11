@@ -11,6 +11,8 @@ Framework use:
 - [Fractal](https://github.com/thephpleague/fractal)
 - [Phinx Migration](https://github.com/robmorgan/phinx)
 - [PHPDotEnv](https://github.com/vlucas/phpdotenv)
+- [Twig Template](http://twig.sensiolabs.org/)
+- [VarDumper](https://github.com/symfony/var-dumper) for dev only.
 
 ## Requirement
 - Nginx or Apache
