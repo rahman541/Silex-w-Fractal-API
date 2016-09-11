@@ -55,5 +55,29 @@ vendor/bin/phinx seed:run
 ```
 *Note: To rollback/undo this setup issue the following command `vendor/bin/phinx rollback -t 0`*
 
+## Configure for Vagrant machine
+```
+vagrant up
+```
+Open this url after [http://192.168.0.100](http://192.168.0.100)
+
+## Configure for Docker
+**1.** Need to create `docker-compose.yml` file from `docker-compose.yml.example`
+```
+cd docker
+cp docker-compose.yml.example docker-compose.yml
+```
+**2.** Configure `docker-compose.yml`:-
+- In nginx > environment > NGINX_ROOT value set to public folder that contains `index.php`
+- In mysql > environment > MYSQL_DATABASE value set to same as in file `.env` of `DB_DATABASE`
+- In mysql > environment > MYSQL_PASSWORD value set to same as in file `.env` of `DB_PASSWORD`
+```
+vim docker-compose.yml
+```
+**3.** Start docker container/image
+```
+docker-compose up -d nginx phpmyadmin
+```
+
 ## Todo
 Documentation
