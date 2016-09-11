@@ -4,7 +4,7 @@
 
 A simple JSON API implemented with Silex, Fractal & Eloquent
 ## Introduction
-Framework using:
+Framework use:
 
 - [Silex micro-Framework](http://silex.sensiolabs.org/)
 - [Eloquent ORM](https://github.com/illuminate/database)
@@ -20,7 +20,7 @@ Framework using:
 
 *Optional for DevOps*
 - [Vagrant](https://www.vagrantup.com/)
-- [Docker](https://www.vagrantup.com/)
+- [Docker](https://www.docker.com)
 
 ## Installation
 **1.** Clone this repo
@@ -28,7 +28,7 @@ Framework using:
 git clone https://github.com/rahman5147/Silex-w-Fractal-API.git
 cd Silex-w-Fractal-API
 ```
-or download this source code directly
+or download this [source code directly](https://github.com/rahman5147/Silex-w-Fractal-API/archive/master.zip)
 
 **2.** Install the Composer dependencies:
 ```bash
