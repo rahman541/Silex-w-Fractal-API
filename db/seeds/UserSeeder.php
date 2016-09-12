@@ -14,6 +14,21 @@ class UserSeeder extends AbstractSeed
      */
     public function run()
     {
-
+    	$faker = Faker\Factory::create('ru_RU');
+    	$type = ['customer','admin'];
+    	$data = [];
+    	for ($i = 0; $i < 10; $i++) {
+        	$data[] = [
+            	'type' => $faker->randomElement($type),
+            	'email' => $faker->email,
+            	'phone_no' => $faker->phoneNumber,
+            	'password' => $faker->password,
+            	'name' => $faker->name,
+            	'address' => $faker->address
+        	];
+    	}
+    	$product = $this->table('user');
+        $product->insert($data)
+              ->save();
     }
 }

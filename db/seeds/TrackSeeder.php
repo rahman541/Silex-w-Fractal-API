@@ -14,6 +14,20 @@ class TrackSeeder extends AbstractSeed
      */
     public function run()
     {
-
+    	$faker = Faker\Factory::create('ru_RU');
+    	$data = [];
+    	for ($i = 0; $i < 10; $i++) {
+        	$data[] = [
+            	'title' => $faker->sentence,
+            	'artist_name' => $faker->name,
+            	'artist_website' => $faker->url,
+            	'album_name' => $faker->word,
+            	'album_release' => $faker->word,
+            	'album_label' => $faker->word
+        	];
+    	}
+    	$product = $this->table('tracks');
+        $product->insert($data)
+              ->save();
     }
 }
