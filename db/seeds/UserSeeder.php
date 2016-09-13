@@ -14,14 +14,15 @@ class UserSeeder extends AbstractSeed
      */
     public function run()
     {
-    	$faker = Faker\Factory::create('ru_RU');
+    	$faker = Faker\Factory::create('en_EN');
+    	$faker->addProvider(new Faker\Provider\ru_RU\PhoneNumber($faker));
     	$type = ['customer','admin'];
     	$data = [];
     	for ($i = 0; $i < 10; $i++) {
         	$data[] = [
             	'type' => $faker->randomElement($type),
             	'email' => $faker->email,
-            	'phone_no' => $faker->phoneNumber,
+            	'phone_no' => $faker->PhoneNumber,
             	'password' => $faker->password,
             	'name' => $faker->name,
             	'address' => $faker->address,
