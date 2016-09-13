@@ -13,6 +13,7 @@ Framework use:
 - [PHPDotEnv](https://github.com/vlucas/phpdotenv)
 - [Twig Template](http://twig.sensiolabs.org/)
 - [VarDumper](https://github.com/symfony/var-dumper) for dev only.
+- [Faker](https://github.com/fzaninotto/Faker)
 
 ## Requirement
 - Nginx or Apache
