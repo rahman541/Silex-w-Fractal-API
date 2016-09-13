@@ -9,13 +9,13 @@ class TrackTransformer extends TransformerAbstract{
 		return [
 			'id' => (int) $track->id,
 			'title' => $track->title,
-			'artist_name' => $track->artist->name,
-			'artist_website' => $track->artist->website,
-			'album_name' => $track->album->name,
-			'album_release' => $track->album->release,
-			'album_label' => $track->album->label,
-			'album_updated_at' => $track->album->updated_at,
-			'album_created_at' => $track->album->created_at
+			'artist_name' => $track->artist_name,
+			'artist_website' => $track->artist_website,
+			'album_name' => $track->album_name,
+			'album_release' => $track->album_release,
+			'album_label' => $track->album_label,
+			'album_updated_at' => $track->updated_at,
+			'album_created_at' => $track->created_at
         ];
 	}
 }

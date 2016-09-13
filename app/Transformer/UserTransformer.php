@@ -5,7 +5,7 @@ use \App\Models\User;
 class UserTransformer extends \League\Fractal\TransformerAbstract{
 	public function transform(User $user){
 		return [
-			'user_id'=>$user->id,
+			'user_id'=>(int) $user->id,
 			'user_type'=>$user->type,
 			'user_email'=>$user->email,
 			'user_phoneNum'=>$user->phone_no,
