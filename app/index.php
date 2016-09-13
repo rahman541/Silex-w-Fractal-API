@@ -27,5 +27,6 @@
     $app->mount('/tracks', include 'controllers/tracks.php');
 
     $app->mount('/book', include 'Controllers/book.php');
+    $app->mount('/borrow', include 'Controllers/borrow.php');
     
     $app->run();
