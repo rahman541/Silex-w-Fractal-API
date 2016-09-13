@@ -9,9 +9,9 @@ $cont->get('/', function() use ($app){
 	$book = Book::with('borrow')->get();
 	// dump($book);
 	return $book->toJson();
-	// $books = new Collection($book, new BookTransformer);
-	// $output = $app['serializer']->createData($books)->toArray();
-	// return json_encode($output);
+	$books = new Collection($book, new BookTransformer);
+	$output = $app['serializer']->createData($books)->toArray();
+	return json_encode($output);
 });
 
 $cont->get('/{id}', function($id) use ($app){
