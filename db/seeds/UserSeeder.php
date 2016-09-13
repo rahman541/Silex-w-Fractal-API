@@ -24,7 +24,9 @@ class UserSeeder extends AbstractSeed
             	'phone_no' => $faker->phoneNumber,
             	'password' => $faker->password,
             	'name' => $faker->name,
-            	'address' => $faker->address
+            	'address' => $faker->address,
+            	'created_at' => $faker->date,
+            	'updated_at' => $faker->date
         	];
     	}
     	$product = $this->table('user');

@@ -21,7 +21,9 @@ class BookSeeder extends AbstractSeed
     			'author' => $faker->firstName,
     			'title' => $faker->sentence,
     			'price' => $faker->randomFloat(2,10,200),	// ie 129.95
-    			'available' => $faker->word
+    			'available' => $faker->word,
+            	'created_at' => $faker->date,
+            	'updated_at' => $faker->date
     		];
     	}
 

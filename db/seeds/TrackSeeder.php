@@ -23,7 +23,9 @@ class TrackSeeder extends AbstractSeed
             	'artist_website' => $faker->url,
             	'album_name' => $faker->word,
             	'album_release' => $faker->word,
-            	'album_label' => $faker->word
+            	'album_label' => $faker->word,
+            	'created_at' => $faker->date,
+            	'updated_at' => $faker->date
         	];
     	}
     	$product = $this->table('tracks');
