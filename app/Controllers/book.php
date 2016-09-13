@@ -6,11 +6,10 @@ use \League\Fractal\Resource\Item;
 
 $cont = $app['controllers_factory'];
 $cont->get('/', function() use ($app){
-	$book = Book::with('borrow')->get();
-	// dump($book);
-	return $book->toJson();
+	$book = Book::all();
 	$books = new Collection($book, new BookTransformer);
-	$output = $app['serializer']->createData($books)->toArray();
+	$man = $app['serializer']->parseIncludes('user');
+	$output = $man->createData($books)->toArray();
 	return json_encode($output);
 });
 

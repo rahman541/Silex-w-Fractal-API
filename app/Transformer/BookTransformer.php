@@ -1,8 +1,14 @@
 <?php
 namespace App\Transformer;
 use App\Models\Book;
+use App\Transformer\UserTransformer;
 
 class BookTransformer extends \League\Fractal\TransformerAbstract{
+
+	protected $availableIncludes = [
+        'user'
+    ];
+
 	public function transform(Book $book){
 		return [
 			'book_id' => $book->id,
@@ -14,4 +20,11 @@ class BookTransformer extends \League\Fractal\TransformerAbstract{
 			'book_created_at' => $book->created_at
 		];
 	}
+
+	public function includeUser(Book $book){
+        $borrow = $book->Users;
+
+        if ($borrow)
+            return $this->collection($borrow, new UserTransformer());
+    }
 }
