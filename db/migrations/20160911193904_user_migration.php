@@ -34,6 +34,8 @@ class UserMigration extends AbstractMigration
               ->addColumn('password', 'string')
               ->addColumn('name', 'string')
               ->addColumn('address', 'string')
+              ->addColumn('created_at', 'date')
+              ->addColumn('updated_at', 'date')
               ->create();
     }
 }

@@ -31,6 +31,8 @@ class BorrowMigration extends AbstractMigration
         $table->addColumn('book_id', 'string', array('limit' => '40'))
               ->addColumn('user_id', 'string')
               ->addColumn('return_date', 'string', ['limit'=>'20'])
+              ->addColumn('created_at', 'date')
+              ->addColumn('updated_at', 'date')
               ->create();
     }
 }

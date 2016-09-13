@@ -32,6 +32,8 @@ class BookMigration extends AbstractMigration
               ->addColumn('title', 'string')
               ->addColumn('price', 'string', ['limit'=>'20'])
               ->addColumn('available', 'string')
+              ->addColumn('created_at', 'date')
+              ->addColumn('updated_at', 'date')
               ->create();
     }
 }

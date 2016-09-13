@@ -32,6 +32,8 @@ class TrackMigration extends AbstractMigration
               ->addColumn('album_name', 'string')
               ->addColumn('album_release', 'string')
               ->addColumn('album_label', 'string')
+              ->addColumn('created_at', 'date')
+              ->addColumn('updated_at', 'date')
               ->create();
     }
 }
