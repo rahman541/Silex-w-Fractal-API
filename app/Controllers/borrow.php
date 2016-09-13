@@ -6,3 +6,5 @@ $contr = $app['controllers_factory'];
 $contr->get('/', function()use ($app){
 	return 'ok';
 });
+
+return $contr;
