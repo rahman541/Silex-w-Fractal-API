@@ -13,7 +13,9 @@ class TrackTransformer extends TransformerAbstract{
 			'artist_website' => $track->artist->website,
 			'album_name' => $track->album->name,
 			'album_release' => $track->album->release,
-			'album_label' => $track->album->label
+			'album_label' => $track->album->label,
+			'album_updated_at' => $track->album->updated_at,
+			'album_created_at' => $track->album->created_at
         ];
 	}
 }

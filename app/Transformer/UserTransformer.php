@@ -6,12 +6,12 @@ class UserTransformer extends \League\Fractal\TransformerAbstract{
 	public function transform(User $user){
 		return [
 			'user_id'=>$user->id,
-			'user_id'=>$user->type,
-			'user_id'=>$user->email,
-			'user_id'=>$user->phone_no,
-			'user_id'=>$user->password,
-			'user_id'=>$user->name,
-			'user_id'=>$user->address
+			'user_type'=>$user->type,
+			'user_email'=>$user->email,
+			'user_phoneNum'=>$user->phone_no,
+			'user_password'=>$user->password,
+			'user_name'=>$user->name,
+			'user_address'=>$user->address
 		];
 	}
 }
