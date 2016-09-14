@@ -16,6 +16,7 @@ $cont->get('/', function() use ($app){
 $cont->get('/{id}', function($id) use ($app){
 	$book = Book::find($id);
 	$book_a = new Item($book, new BookTransformer);
+	$app['serializer']->parseIncludes('user');
 	$output = $app['serializer']->createData($book_a)->toArray();
 	return json_encode($output);
 });
