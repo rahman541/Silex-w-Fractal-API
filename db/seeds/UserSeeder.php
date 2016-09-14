@@ -23,7 +23,7 @@ class UserSeeder extends AbstractSeed
             	'type' => $faker->randomElement($type),
             	'email' => $faker->email,
             	'phone_no' => $faker->PhoneNumber,
-            	'password' => $faker->sha1,
+            	'password' => $faker->md5,
             	'name' => $faker->name,
             	'address' => $faker->address,
             	'created_at' => $faker->date,
