@@ -4,6 +4,10 @@
 
 A simple JSON API implemented with Silex, Fractal & Eloquent
 ## Introduction
+**Database Table**
+
+![alt text](erd.png "ERD")
+
 Framework use:
 
 - [Silex micro-Framework](http://silex.sensiolabs.org/)
