@@ -89,7 +89,7 @@ vim docker-compose.yml
 ```
 docker-compose up -d nginx phpmyadmin
 ```
-**5.** To visit app: [192.168.99.100](http://192.168.99.100). For phpmyadmin [192.168.99.100:8080](192.168.99.100:8080).
+**5.** To visit app: [192.168.99.100](http://192.168.99.100). For phpmyadmin [192.168.99.100:8080](http://192.168.99.100:8080).
 
 **6.** Stop docker & destroy container
 ```
