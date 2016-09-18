@@ -69,19 +69,23 @@ vagrant up
 Open this url after [http://192.168.0.100](http://192.168.0.100)
 
 ## Configure for Docker
-**1.** Need to create `docker-compose.yml` file from `docker-compose.yml.example`
+**1.** Fetch docker repository
+```bash
+git submodule update --init -- "docker"
+```
+**2.** Need to create `docker-compose.yml` file from `docker-compose.yml.example`
 ```
 cd docker
 cp docker-compose.yml.example docker-compose.yml
 ```
-**2.** Configure `docker-compose.yml`:-
+**3.** Configure `docker-compose.yml`:-
 - In nginx > environment > NGINX_ROOT value set to public folder that contains `index.php`
 - In mysql > environment > MYSQL_DATABASE value set to same as in file `.env` of `DB_DATABASE`
 - In mysql > environment > MYSQL_PASSWORD value set to same as in file `.env` of `DB_PASSWORD`
 ```
 vim docker-compose.yml
 ```
-**3.** Start docker container/image
+**4.** Start docker container/image
 ```
 docker-compose up -d nginx phpmyadmin
 ```
