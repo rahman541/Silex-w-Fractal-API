@@ -3,6 +3,7 @@ use App\Models\User;
 use \App\Transformer\UserTransformer;
 use \League\Fractal\Resource\Collection;
 use \League\Fractal\Resource\Item;
+use Symfony\Component\HttpFoundation\Response;
 
 $con = $app['controllers_factory'];
 
@@ -11,7 +12,7 @@ $con->get('/', function()use ($app){
 	$users = new Collection($user, new UserTransformer);
 	$app['serializer']->parseIncludes('book');
 	$output = $app['serializer']->createData($users)->toArray();
-	return json_encode($output);
+	return new Response(json_encode($output),202, ['Content-Type'=>'application/json']);
 });
 
 $con->get('/{id}', function($id) use ($app){
