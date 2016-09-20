@@ -8,7 +8,7 @@ A simple JSON API implemented with Silex, Fractal & Eloquent
 
 ![alt text](erd.png "ERD")
 
-Framework use:
+Component used:
 
 - [Silex micro-Framework](http://silex.sensiolabs.org/)
 - [Eloquent ORM](https://github.com/illuminate/database)
