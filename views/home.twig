@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Title</title>
+	<title>Test API with SILEX &amp; Fractal</title>
 </head>
 <body>
-	Welcome to silex framework.
+	Welcome to silex framework.<br/><br/>
+	available route:
+	<ul>
+		<li>Login route: POST /login
+			<ul>
+				<li>email</li>
+				<li>password</li>
+			</ul>
+		</li>
+		<li>Require auth route: GET /user</li>
+		<li>Require auth route: GET /user/{id}</li>
+	</ul>
 </body>
 </html>
