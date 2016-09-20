@@ -40,6 +40,11 @@
 	    	if($jwt){
 	    		try{
 		    		JWT::decode($jwt, getenv('APP_KEY'), array('HS256'));
+	    		}catch(\Firebase\JWT\ExpiredException $e){
+	    			return new Response(json_encode([
+		    			'error'=>true,
+		    			'message'=>'Token expired',
+					]), 200, ['Content-Type'=>'application/json']);
 	    		}catch(\Exception $e){
 	    			return new Response(json_encode([
 		    			'error'=>true,
