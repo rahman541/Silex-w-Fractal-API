@@ -20,9 +20,13 @@
 	    return $manager;
 	});
 
+	$app['jwt'] = function(){
+		return new \App\MyJWT();
+	};
+
 	$app->get('/', function() use($app) {
 		return $app['twig']->render('home.twig');
-	}); 
+	});
     
     $app->mount('/tracks', include 'controllers/tracks.php');
 

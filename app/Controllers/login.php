@@ -12,7 +12,9 @@ $cont->post('/', function(Request $request) use ($app){
 		$password = $request->get('password');
 		$user = User::where(['email'=>$email,'password'=>$password])->get();
 		if(count($user)==1){
-			return new Response(json_encode(['user'=>$user->first()]),202,['Content-Type'=>'application/json']);
+			dump($app['jwt']);
+			return $app['jwt']->getToken($email, $user->id, ['all.all']);
+			// return new Response(json_encode(['user'=>$user->first()]),202,['Content-Type'=>'application/json']);
 		}else{
 			return new Response(json_encode([
 				'error'=>true,
