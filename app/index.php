@@ -29,5 +29,6 @@
     $app->mount('/book', include 'Controllers/book.php');
     $app->mount('/borrow', include 'Controllers/borrow.php');
     $app->mount('/user', include 'Controllers/user.php');
+    $app->mount('/login', include 'Controllers/login.php');
     
     $app->run();
