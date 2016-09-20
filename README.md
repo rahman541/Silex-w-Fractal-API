@@ -18,6 +18,7 @@ Framework use:
 - [Twig Template](http://twig.sensiolabs.org/)
 - [VarDumper](https://github.com/symfony/var-dumper) for dev only.
 - [Faker](https://github.com/fzaninotto/Faker)
+- [JWT](https://github.com/firebase/php-jwt/)
 
 ## Requirement
 - Nginx or Apache

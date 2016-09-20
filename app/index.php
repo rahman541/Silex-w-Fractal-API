@@ -20,14 +20,19 @@
 	    return $manager;
 	});
 
+	$app['jwt'] = function(){
+		return new \App\MyJWT();
+	};
+
 	$app->get('/', function() use($app) {
 		return $app['twig']->render('home.twig');
-	}); 
+	});
     
     $app->mount('/tracks', include 'controllers/tracks.php');
 
     $app->mount('/book', include 'Controllers/book.php');
     $app->mount('/borrow', include 'Controllers/borrow.php');
     $app->mount('/user', include 'Controllers/user.php');
+    $app->mount('/login', include 'Controllers/login.php');
     
     $app->run();
